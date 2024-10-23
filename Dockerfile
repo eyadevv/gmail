@@ -16,6 +16,7 @@ COPY . ./
 
 # Install all dependencies and build the project.
 # Don't audit to speed up the installation.
+RUN npx playwright install 
 RUN npm run build
 
 # Create final image
