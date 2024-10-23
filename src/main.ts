@@ -24,7 +24,7 @@ async function main() {
   const launcher = new PlaywrightLauncher({
     // useChrome: true,
     launcher: firefox,
-    userDataDir: "/home/eyad/Projects/gmail/3",
+    userDataDir: "/3",
     launchOptions: {
       userAgent: file.fingerprint.userAgent,
       headless: false,
