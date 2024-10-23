@@ -1,0 +1,18 @@
+# This file tells Git which files shouldn't be added to source control
+
+.idea
+dist
+node_modules
+storage
+2
+3
+./2
+./3
+/2
+/3
+.actor
+# Added by Apify CLI
+.venv
+/2
+2/.parentlock
+/2
