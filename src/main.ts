@@ -13,18 +13,15 @@ const proxyConfiguration = await Actor.createProxyConfiguration({
   password: "apify_proxy_SX2YIVSaopqNNWEeu1q3OsFd7WLnSB0Pmttv",
 });
 async function main() {
-  const __filename = fileURLToPath(import.meta.url);
-
   // ES module replacement for __dirname
-  const __dirname = dirname(__filename);
   const fingerprintInjector = new FingerprintInjector();
-  const file = await readFile(`${__dirname}/fingerprint.json`, "utf-8").then(
-    (res) => JSON.parse(res)
+  const file = await readFile(`../fingerprint.json`, "utf-8").then((res) =>
+    JSON.parse(res)
   );
   const launcher = new PlaywrightLauncher({
     // useChrome: true,
     launcher: firefox,
-    userDataDir: "/3",
+    userDataDir: "../3",
     launchOptions: {
       userAgent: file.fingerprint.userAgent,
       headless: false,
