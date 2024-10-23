@@ -16,7 +16,6 @@ COPY . ./
 
 # Install all dependencies and build the project.
 # Don't audit to speed up the installation.
-RUN npx playwright install 
 RUN npm run build
 
 # Create final image
@@ -48,4 +47,5 @@ COPY . ./
 
 
 # Run the image.
+Run npx playwright install
 CMD npm run start:prod --silent
