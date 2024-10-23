@@ -13,7 +13,7 @@ const proxyConfiguration = await Actor.createProxyConfiguration({
 async function main() {
   // ES module replacement for __dirname
   const fingerprintInjector = new FingerprintInjector();
-  const fingerprint: BrowserFingerprintWithHeaders = {
+  const fingerprint: any = {
     fingerprint: {
       screen: {
         availHeight: 1080,
